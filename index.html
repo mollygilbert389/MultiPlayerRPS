@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div id="titlescreen" class="modal-content">
+            <h1>Welcome to Rock Paper Scissors!!</h1>
+            <p class="bold">Please Choose a Display Name</p>
+            <p>&bull; Must be unqiue</p>
+            <p>&bull; Use only letter, numbers, '-', and '_'</p>
+            <p>&bull; Must be 12 characters or less</p>
+            <br>
+            <p class="bold">Win 2 Rounds to beat your opponent</p>
+            <br>
+            <p class="bold">Have Fun & Good Luck!!</p>
+            <div class="btn-cont">
+                
+                <p>Display Name: <input id="name" type="text"></p>
+                <button id="namechoice">Begin</button>
+            </div>
+        </div>
+        <div id="challenged" class="modal-content">
+            <p>You have been challenged by: <span id="challenger"></span></p>
+            <button id="accept">Accept</button>
+            <button id="decline">Decline</button>
+        </div>
+        <div id="gamezone" class="modal-content">
+            <h1>Rock - Paper - Scissors</h1>
+            <div id="battlefield">
+                <div id="myarea"></div>
+                <div id="results">
+                    <div id="timer">
+                        <p>Time Left:</p>
+                        <p id="remaining">10</p>
+                    </div>
+                    <div id="winner">
+                        <p>You Win!</p>  
+                        <p id="winreason"></p>
+                    </div>
+                    <div id="loser">
+                        <p>You Lose!</p>
+                        <p id="losereason"></p>
+                    </div>
+                    <div id="tied">
+                        <p>You Tied!</p>
+                        <p id="tiereason"></p>
+                    </div>
+                    
+                </div>
+                <div id="opparea">
+                    <div id="opptitle">Waiting on Opponent</div>
+                    <img id="oppIMG" src="#" alt="">
+                </div>
+            </div>
+            <br>
+            <h3>Choose your Weapon!</h3>
+            <div id="choiceholder">
+                <div class="choice" id="rock">
+                    <img src="assets/images/rock.png" alt="">
+                </div>
+                <div class="choice" id="paper">
+                    <img src="assets/images/paper.png" alt="">
+                </div>
+                <div class="choice" id="scissors">
+                    <img src="assets/images/scissors.png" alt="">
+                </div>
+            </div>
+            <div id="btn-holder2">
+                <div id="btn-center">
+                    <button id="makechoice">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="waiting"  class="modal-content">
+                <h4 class="boldp">Waiting on Opponent</h4>
+                <br>
+                <p>Time Left: <span id="waittime">10</span></p>
+                <button id="cancel">Cancel</button>
+        </div>
+
+    </div>
+    <div id="maincontent">
+        <h1 id="title">Rock-Paper-Scissors</h1>
+         <div id="lobby">
+            <h1 id="title-lobby">Game Lobby</h1>
+            <div id="lobby-holder">
+                <table id="game-lobby">
+                    <tr>
+                        <th>Display Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Status</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="instructions">
+            <p>Click on an available opponent and challenge them to a match!</p>
+        </div>
+        <div id="challengeCard">
+            <p class="opptitles">Display Name: <span id="challengename"></span></p>
+            <p class="opptitles">Wins: <span id="challengewins"></span> Losses: <span id="challengelosses"></span> </p>
+            <div id="btn-center">
+                <button id="challenge">Challenge</button>
+            </div>
+        </div>
+        <div id="chat-cont">
+            <div id="chat-window"></div>
+            <div id="control-cont">
+                <input id="talk" type="text"> 
+                <button id="chat">Submit</button>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="assets/javascript/game.js"></script>
+</html>

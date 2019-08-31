@@ -1,0 +1,171 @@
+body {
+    background: url(../images/background.png);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#maincontent {
+    margin: 60px auto 0 auto;
+    width: 60%;
+    height: 800px;
+    border: 10px solid #0086F1;
+    background: white;
+    z-index: 1;
+}
+
+#title{
+    text-align: center;
+    font-size: 72px;
+    text-decoration: underline;
+}
+
+#title-lobby{
+    text-align: center;
+    font-size: 36px;
+}
+
+#lobby{
+    width: 90%;
+    height: 250px;
+    margin: 0 auto 30px auto;
+    overflow: auto;
+    text-align: center;
+}
+
+#lobby-holder {
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    border: 5px solid black;
+}
+
+th, td{
+    text-align: center;
+    border: 1px solid black;
+}
+
+td {
+    font-size: 20px;
+}
+
+#game-lobby {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#game-lobby tr:nth-child(even){background-color: #f2f2f2;}
+
+#game-lobby tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+#game-lobby th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0086F1;
+    color: white;
+}
+
+#challengeCard {
+    width: 50%;
+    height: 150px;
+    margin: 0 auto;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 22px;
+    background: white;
+}
+
+.opptitles {
+    font-weight: bold;
+    margin: 10px 0px 5px 0;
+}
+
+span {
+    font-weight: normal;
+}
+
+#challengewins {
+    margin-right: 40px;
+}
+
+
+#btn-holder {
+    width: 49%;
+    float: right;
+    height: 100%;
+}
+
+
+#btn-center {
+    width: 270px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+}
+
+#challenge {
+    margin: 0 auto;
+    height: 50px;
+    width: 250px;
+    border: 5px solid black;
+    background: #0086F1;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#chat-cont{
+    width:60%;
+    height: 200px;
+    margin: 30px auto;  
+}
+
+#chat-window {
+    width: 98%;
+    margin: 0 auto;
+    height: 150px;
+    border: 2px solid grey;
+    overflow: scroll;
+}
+
+#control-cont {
+    width: 90%;
+    height: 30px;
+    margin: 5px auto;
+}
+
+#talk {
+    width: 75%;
+    display: inline-block;
+    height: 20px;
+}
+
+#chat {
+    width: 70px;
+    float: right;
+    height: 90%;
+    margin-right: 10px;
+    border: 2px solid black;
+    background: #0086F1;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#instructions{
+    width: 60%;
+    text-align: center;
+    margin: 5px auto 15px auto;
+    font-weight: bold;
+    font-size: 22px;
+}
+
